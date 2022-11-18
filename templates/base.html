@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="ua">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,8 +39,8 @@
                             class="fa-brands fa-facebook"></i></a></li>
                 </div>
 
-                <li class="nav-item"><a href="{% url 'index' %}" class="nav-link">ПРОДУКЦІЯ</a></li>
-                <li class="nav-item"><a href="{% url 'product' %}" class="nav-link">ІНФОРМАЦІЯ</a></li>
+                <li class="nav-item"><a href="{% url 'product' %}" class="nav-link">ПРОДУКЦІЯ</a></li>
+                <li class="nav-item"><a href="{% url 'about' %}" class="nav-link">ІНФОРМАЦІЯ</a></li>
                 <li class="nav-item"><a href="{% url 'contact' %}" class="nav-link">КОНТАКТИ</a></li>
                 <li class="nav-item"><a href="{% url 'home' %}" class="nav-link">УВІЙТИ</a></li>
                 <li class="nav-item"><p class="nav-link"><i class="fa-regular fa-user"></i> {{ user }}</p></li>
