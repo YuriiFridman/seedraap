@@ -1,0 +1,17 @@
+form {
+    text-align: center;
+    justify-content: center;
+    border-radius:5px;
+}
+
+.back{
+    cursor:pointer;
+    width:100%;
+    border:none;
+    background: lightgreen;
+    color: #4CAF50;
+    font-weight: 600;
+    margin:0 0 5px;
+    padding:10px;
+    font-size:15px;
+}

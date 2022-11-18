@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        p {
+            line-height: 0;
+        }
+
+        button {
+            line-height: 1.5;
+        }
+    </style>
+    <h1>Реєстрація</h1>
+    <p>Будь ласка, заповніть цю форму, щоб створити обліковий запис.</p>
+    <hr>
+
+    <form action="{% url 'register' %}" method="post" class="form">
+        {% csrf_token %}
+        <p>Введіть імʼя користувача: {{ form.username }}</p>
+        <p>Введіть пошту: {{ form.email }}</p>
+        <p>Введіть пароль: {{ form.password1 }}</p>
+        <p>Пароль не може бути надто схожим на іншу особисту інформацію.</p>
+        <p>Ваш пароль повинен містити як мінімум 8 символів</p>
+        <p>Пароль не може бути одним із дуже поширених.</p>
+        <p>Пароль не може складається лише із цифр.</p>
+        <p>Підтвердіть пароль: {{ form.password2 }}
+        <p>Введіть той же пароль, що і раніше, для підтвердження.</p>
+        <button type="submit" class="btn btn-success">Реєстрація</button>
+        <a href="{% url 'home' %}"><button type="button" class="btn btn-success">Назад</button>
+    </form>
+{% endblock %}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <style>
+        .button1 {
+            background-color: #198754;
+            color: white;
+            padding: 16px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: 600;
+            width: 100%;
+            opacity: 0.9;
+        }
+    </style>
+    <h1>Авторизація</h1>
+    <hr>
+
+    {% if user.is_authenticated %}
+        <a href="{% url 'logout' %}">Вийти з облікового запису</a>
+    {% else %}
+        <a href="{% url 'login' %}">
+            <button class="button1"><i class="fa-solid fa-right-to-bracket"></i> Увійти в обліковий запис</button>
+        </a>
+        <a href="{% url 'register' %}">
+            <button class="button1"><i class="fa-solid fa-address-card"></i> Зареєструвати обліковий запис</button>
+        </a>
+    {% endif %}
+{% endblock %}

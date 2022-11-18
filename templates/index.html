@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="header-row">
+        <div class="header-content">
+            <h1 class="header-heading">SEEDRA Насіння базиліка для внутрішнього та відкритого саду</h1>
+            <p>Переконайтеся в нашій якості - найсвіжіші партії цього сезону.
+                Без ГМО, реліквія - наше насіння пройшло перевірку та має найкращі показники схожості.
+                Ваш легкий досвід вирощування — наша гарантія</p>
+            <div class="price"><img src="{% static 'users/images/fire.png' %}" alt="" class="fire">464,33₴</div>
+            <div class="buy">
+                <button type="button" name="buy" class="buy1" onClick='location.href="{% url 'product' %}"'>
+                    Придбати
+                </button>
+                <button type="button" name="buy" class="sale1" onClick='location.href="{% url 'product' %}"'>
+                    Знижки
+                </button>
+            </div>
+        </div>
+        <div class="header-img">
+            <img src="{% static 'users/images/seedra-pack.png' %}" alt="" class="midl">
+        </div>
+    </div>
+{% endblock %}

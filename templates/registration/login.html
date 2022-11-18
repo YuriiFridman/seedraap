@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Авторизація</h1>
+    <hr>
+
+    {% if form.errors %}
+        <p>{{ form.errors.error }}</p>
+    {% endif %}
+
+    <form action="{% url 'login' %}" method="post">
+        {% csrf_token %}
+        <p>Ім'я користувача: {{ form.username }}</p>
+        <p>Пароль: {{ form.password }}</p>
+    <button type="submit" class="btn btn-success">Увійти</button>
+    </form>
+
+    <a href="{% url 'password_reset' %}">Забули пароль?</a>
+{% endblock %}
